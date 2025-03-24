@@ -1,19 +1,30 @@
-Testes Cypress - Metro Uptime
-Testes end-to-end para https://metro-uptime-sbw5.vercel.app/ usando Cypress.
-Instalação
-Clone o repositório:
-bash
+```markdown
+# Testes Cypress - Metro Uptime
 
+Testes end-to-end para [Metro Uptime](https://metro-uptime-sbw5.vercel.app/) usando Cypress.
+
+---
+
+## 🧰 Instalação
+
+Clone o repositório:
+
+```bash
 git clone https://github.com/seu-usuario/metro-uptime-tests.git
 cd metro-uptime-tests
+```
 
 Instale as dependências:
-bash
 
+```bash
 npm install
+```
 
-Estrutura
+---
 
+## 🗂️ Estrutura
+
+```
 cypress/
 ├── e2e/metro-uptime/
 │   ├── homepage.cy.js  # Testes da página inicial
@@ -23,31 +34,57 @@ cypress/
 │   ├── commands.js     # Comandos reutilizáveis
 │   └── e2e.js
 └── cypress.config.js   # Configuração
+```
 
-Scripts
-Abrir Cypress: npm run cy:open
+---
 
-Rodar testes: npm run cy:run
+## 📜 Scripts
 
-Testes
-Homepage: Verifica carregamento e título.
+- Abrir Cypress (modo interativo):  
+  ```bash
+  npm run cy:open
+  ```
 
-Lines: Testa navegação para /line/line1 e volta.
+- Rodar testes (modo headless):  
+  ```bash
+  npm run cy:run
+  ```
 
-Admin: Valida erro 401 em /admin.
+---
 
-Comandos
-cy.checkLineStatus(line, status): Checa status de uma linha.
+## ✅ Testes
 
-cy.navigateTo(path): Navega para um caminho.
+- **Homepage**: Verifica carregamento e título.
+- **Lines**: Testa navegação para `/line/line1` e volta.
+- **Admin**: Valida erro 401 em `/admin`.
 
-Execução
-Interativo: npm run cy:open
+---
 
-Headless: npm run cy:run
+## 🔁 Comandos Personalizados
 
-Notas
-Ajuste seletores conforme o HTML real.
+- `cy.checkLineStatus(line, status)`: Checa status de uma linha.  
+- `cy.navigateTo(path)`: Navega para um caminho.
 
-Expanda com testes de responsividade ou mock de APIs.
+---
+
+## 🚀 Execução
+
+- **Modo Interativo**:  
+  ```bash
+  npm run cy:open
+  ```
+
+- **Modo Headless**:  
+  ```bash
+  npm run cy:run
+  ```
+
+---
+
+## 📌 Notas
+
+- Ajuste os seletores conforme o HTML real.
+- Expanda com testes de responsividade ou mock de APIs.
+
+---
 
