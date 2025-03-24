@@ -23,6 +23,15 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })// Comandos personalizados
-Cypress.Commands.add('checkPageLoad', (url) => {
-    cy.url().should('eq', url);
+// Verifica o status de uma linha
+Cypress.Commands.add('checkLineStatus', (lineName, expectedStatus) => {
+    cy.get(`[data-line="${lineName}"]`)
+      .should('be.visible')
+      .find('.status') // Ajuste o seletor
+      .should('contain.text', expectedStatus);
+  });
+  
+  // Navega para uma página
+  Cypress.Commands.add('navigateTo', (path) => {
+    cy.visit(path);
   });
